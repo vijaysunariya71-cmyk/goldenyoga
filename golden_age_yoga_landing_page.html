@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVM9X7KMS8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BVM9X7KMS8');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Age Yoga | Free Senior Yoga Classes Online & In-Person USA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e3eae3',
+                            200: '#c7d6c7',
+                            600: '#527853',
+                            700: '#3e5c3f',
+                            800: '#2b3f2c',
+                        },
+                        sand: {
+                            50: '#faf7f2',
+                            100: '#f3ece0',
+                            200: '#e5d7c3',
+                        },
+                        warmGold: '#d4a373',
+                        softBlue: '#e0f2fe',
+                        deepBlue: '#0369a1',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #faf7f2;
+            color: #2c3531;
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(250, 247, 242, 0.85) 0%, rgba(250, 247, 242, 0.95) 100%);
+        }
+        /* Custom accessibility focus outline */
+        a:focus, button:focus, input:focus, select:focus {
+            outline: 3px solid #d4a373 !important;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-sage-200 selection:text-sage-800">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-sage-700 text-white text-center py-2 px-4 text-sm font-medium sm:text-base">
+        <i class="fa-solid fa-heart text-amber-300 mr-2" aria-hidden="true"></i>
+        100% Free Yoga for Seniors Across the USA • Online & Community Locations
+    </div>
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-40 bg-sand-50/95 backdrop-blur-md border-b border-sand-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full bg-sage-600 text-white flex items-center justify-center text-2xl shadow-md group-hover:bg-sage-700 transition">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl sm:text-3xl font-bold text-sage-800 tracking-tight block">Golden Age Yoga</span>
+                        <span class="text-xs font-semibold text-warmGold uppercase tracking-widest block -mt-1">USA Community</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-lg font-medium text-sage-800">
+                    <a href="#about" class="hover:text-sage-600 transition">About Us</a>
+                    <a href="#benefits" class="hover:text-sage-600 transition">Benefits</a>
+                    <a href="#classes" class="hover:text-sage-600 transition">Class Types</a>
+                    <a href="#locations" class="hover:text-sage-600 transition">Find Classes</a>
+                    <a href="#faq" class="hover:text-sage-600 transition">FAQ</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button onclick="openModal('General Free Class')" class="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 flex items-center space-x-2">
+                        <span>Claim Free Class</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-sage-800 p-2 rounded-lg text-2xl focus:outline-none" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sand-50 border-b border-sand-200 px-4 pt-2 pb-6 space-y-3 text-lg font-medium">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 hover:text-sage-600">About Us</a>
+            <a href="#benefits" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 hover:text-sage-600">Benefits</a>
+            <a href="#classes" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 hover:text-sage-600">Class Types</a>
+            <a href="#locations" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 hover:text-sage-600">Find Classes</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 hover:text-sage-600">FAQ</a>
+            <button onclick="toggleMobileMenu(); openModal('Mobile Hero');" class="w-full text-center bg-sage-600 text-white py-3 rounded-full font-semibold shadow-md mt-4">
+                Claim Free Class
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-sand-100 overflow-hidden py-16 sm:py-24 lg:py-28 border-b border-sand-200">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1920" alt="Seniors practicing gentle yoga in a peaceful park" class="w-full h-full object-cover object-center opacity-20">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <!-- Trust Tag -->
+                    <div class="inline-flex items-center space-x-2 bg-sage-100 border border-sage-200 text-sage-800 px-4 py-2 rounded-full text-base font-semibold shadow-sm">
+                        <i class="fa-solid fa-shield-halved text-sage-600"></i>
+                        <span>100% Free Forever • No Credit Card Needed</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-800 leading-tight">
+                        Gentle Yoga for Health, Balance & Vitality
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl text-gray-700 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Join thousands of seniors across the USA staying fit, flexible, and connected with our friendly live online & in-person community classes.
+                    </p>
+
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#locations" class="w-full sm:w-auto text-center bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 rounded-full text-xl font-semibold shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-3">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Find Nearby Classes</span>
+                        </a>
+                        <button onclick="openModal('Live Online')" class="w-full sm:w-auto text-center bg-white hover:bg-sand-50 text-sage-800 border-2 border-sage-600 px-8 py-4 rounded-full text-xl font-semibold shadow-md hover:shadow-lg transition flex items-center justify-center space-x-3">
+                            <i class="fa-solid fa-video text-sage-600"></i>
+                            <span>Join Live Online</span>
+                        </button>
+                    </div>
+
+                    <!-- Highlights Badge -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 text-center border-t border-sand-200/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-sage-700">50,000+</div>
+                            <div class="text-sm text-gray-600">US Seniors</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-sage-700">100+</div>
+                            <div class="text-sm text-gray-600">US Cities</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-sage-700">4.9 ★</div>
+                            <div class="text-sm text-gray-600">Member Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative max-w-md w-full bg-white p-4 rounded-3xl shadow-2xl border border-sand-200 transform lg:rotate-1">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800" alt="Happy senior woman practicing chair yoga with smile" class="rounded-2xl w-full h-80 sm:h-96 object-cover mb-4">
+                        <div class="p-2 text-center">
+                            <blockquote class="font-serif italic text-lg text-sage-800">
+                                "Yoga at 72 restored my confidence in walking without pain. The instructors are so patient!"
+                            </blockquote>
+                            <p class="text-sm font-semibold text-gray-500 mt-2">— Eleanor M., Tampa, FL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section id="benefits" class="py-20 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-warmGold uppercase mb-2">Designed Specially For Seniors 50+</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sage-800">Feel Stronger, Move Easier & Live Fuller</h3>
+                <p class="mt-4 text-xl text-gray-600">Our gentle routines are tailored to support joint health, mobility, and everyday peace of mind without strain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-sand-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-person-walking-with-cane"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-semibold text-sage-800 mb-3">Balance & Fall Prevention</h4>
+                    <p class="text-gray-600 leading-relaxed">Strengthen your core and ankle stability with gentle standing and supported poses designed to keep you steady on your feet.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-sand-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-100 text-warmGold flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-semibold text-sage-800 mb-3">Joint & Pain Relief</h4>
+                    <p class="text-gray-600 leading-relaxed">Doctor-recommended stretches targeting arthritis, stiffness, back pain, and knee discomfort for natural daily relief.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-sand-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-semibold text-sage-800 mb-3">Better Sleep & Clarity</h4>
+                    <p class="text-gray-600 leading-relaxed">Calming breathwork and guided relaxation tecniche that soothe the nervous system, lower blood pressure, and improve sleep.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-sand-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-semibold text-sage-800 mb-3">Warm Social Community</h4>
+                    <p class="text-gray-600 leading-relaxed">Connect with friendly peers in your local city or online. Stay active, make new friends, and enjoy community social events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Types Section -->
+    <section id="classes" class="py-20 bg-sand-100 border-t border-b border-sand-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-warmGold uppercase mb-2">Gentle & Accessible Options</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sage-800">Yoga Styles Built Around Your Comfort</h3>
+                <p class="mt-4 text-xl text-gray-600">No experience needed. All postures can be modified using chairs, blocks, or straps.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Class 1: Chair Yoga -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand-200 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600" alt="Senior practicing chair yoga gentle stretch" class="h-60 w-full object-cover">
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-sage-100 text-sage-800 px-3 py-1 rounded-full text-sm font-semibold">100% Seated Option</span>
+                                <span class="text-gray-500 text-sm font-medium"><i class="fa-regular fa-clock mr-1"></i> 45 Mins</span>
+                            </div>
+                            <h4 class="font-serif text-2xl font-bold text-sage-800 mb-3">Seated Chair Yoga</h4>
+                            <p class="text-gray-600 mb-6">Ideal for seniors with mobility challenges, knee pain, or balance concerns. Enjoy full-body stretches safely seated in a comfortable chair.</p>
+                        </div>
+                        <button onclick="openModal('Chair Yoga')" class="w-full bg-sand-100 hover:bg-sage-600 hover:text-white text-sage-800 py-3 rounded-full font-semibold transition text-center">
+                            Reserve Chair Yoga Slot
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Class 2: Gentle Mat Yoga -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand-200 flex flex-col relative">
+                    <div class="absolute top-4 right-4 bg-warmGold text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow">
+                        Most Popular
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=600" alt="Gentle mat stretches for seniors" class="h-60 w-full object-cover">
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">Gentle Standing & Mat</span>
+                                <span class="text-gray-500 text-sm font-medium"><i class="fa-regular fa-clock mr-1"></i> 50 Mins</span>
+                            </div>
+                            <h4 class="font-serif text-2xl font-bold text-sage-800 mb-3">Beginner Gentle Flow</h4>
+                            <p class="text-gray-600 mb-6">Light standing and floor poses to restore hip flexibility, posture, and spinal alignment. Supportive props used throughout.</p>
+                        </div>
+                        <button onclick="openModal('Beginner Gentle Flow')" class="w-full bg-sage-600 hover:bg-sage-700 text-white py-3 rounded-full font-semibold transition text-center shadow-md">
+                            Reserve Gentle Flow Slot
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Class 3: Breathing & Restorative -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand-200 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600" alt="Relaxing meditation and breathwork for older adults" class="h-60 w-full object-cover">
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-semibold">Deep Relaxation</span>
+                                <span class="text-gray-500 text-sm font-medium"><i class="fa-regular fa-clock mr-1"></i> 40 Mins</span>
+                            </div>
+                            <h4 class="font-serif text-2xl font-bold text-sage-800 mb-3">Restorative & Breathwork</h4>
+                            <p class="text-gray-600 mb-6">Slow, meditative session focusing on deep belly breathing, gentle neck & shoulder release, and guided relaxation for stress relief.</p>
+                        </div>
+                        <button onclick="openModal('Restorative & Breathwork')" class="w-full bg-sand-100 hover:bg-sage-600 hover:text-white text-sage-800 py-3 rounded-full font-semibold transition text-center">
+                            Reserve Breathwork Slot
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Schedule Search Section -->
+    <section id="locations" class="py-20 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-sage-800 rounded-3xl text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+                <!-- Background Accent Circle -->
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-sage-700/50 blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6">
+                    <span class="inline-block bg-warmGold text-white font-semibold text-sm px-4 py-1.5 rounded-full uppercase tracking-wider">
+                        USA Class Schedule
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">Find Free Classes in Your City or Online</h3>
+                    <p class="text-lg sm:text-xl text-sage-100 font-light">
+                        Select your location below to see upcoming free sessions in nearby senior centers, parks, or live Zoom broadcasts.
+                    </p>
+
+                    <!-- Search Input Box -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                        <div class="relative flex-1">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+                            <select id="location-select" onchange="filterSchedule()" class="w-full pl-12 pr-4 py-4 rounded-full bg-white text-gray-800 font-semibold text-lg border-2 border-transparent focus:border-warmGold shadow-lg appearance-none cursor-pointer">
+                                <option value="all">📍 Show All Major USA Cities</option>
+                                <option value="ny">New York, NY (Manhattan & Brooklyn)</option>
+                                <option value="ca">Los Angeles / Orange County, CA</option>
+                                <option value="fl">Miami / Tampa / Orlando, FL</option>
+                                <option value="tx">Houston / Dallas / Austin, TX</option>
+                                <option value="il">Chicago, IL (Metro Area)</option>
+                                <option value="az">Phoenix / Scottsdale, AZ</option>
+                                <option value="online">💻 Live Online (Zoom - Nationwide)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Schedule Display Table -->
+                <div class="relative z-10 mt-12 bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-sand-100 text-sage-800 font-serif text-lg border-b border-sand-200">
+                                    <th class="py-4 px-6">Location / Mode</th>
+                                    <th class="py-4 px-6">Day & Time</th>
+                                    <th class="py-4 px-6">Class Type</th>
+                                    <th class="py-4 px-6">Venue</th>
+                                    <th class="py-4 px-6 text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="schedule-body" class="divide-y divide-gray-100 text-base font-medium">
+                                <!-- Dynamically populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Certified Instructors Section -->
+    <section class="py-16 bg-white border-t border-b border-sand-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-sage-700 font-bold uppercase tracking-wider text-sm">
+                        <i class="fa-solid fa-award text-amber-500 text-lg"></i>
+                        <span>Your Safety Is Our Top Priority</span>
+                    </div>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-sage-800">
+                        Led by Certified Senior Yoga Specialists
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Every Golden Age Yoga instructor is certified in geriatric movement, arthritis-safe alignment, and injury-prevention protocols. We coordinate with healthcare advisors to ensure every pose is gentle, supportive, and safe.
+                    </p>
+                    <ul class="space-y-4 text-gray-700 text-lg font-medium">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-sage-600 text-xl"></i>
+                            <span>Doctor-approved posture modifications for osteoporosis & joint replacements</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-sage-600 text-xl"></i>
+                            <span>Small class sizes for individual attention & guidance</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-sage-600 text-xl"></i>
+                            <span>Welcoming to complete beginners & caregivers</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=500" alt="Friendly instructor guiding senior student" class="rounded-2xl h-64 w-full object-cover shadow-md">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=500" alt="Seniors enjoying group yoga exercise class" class="rounded-2xl h-64 w-full object-cover shadow-md mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-warmGold uppercase mb-2">Real Stories From Members</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-sage-800">Loved by Seniors Across America</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-sand-200 shadow-md relative">
+                    <div class="text-amber-400 text-xl mb-4">★ ★ ★ ★ ★</div>
+                    <p class="text-gray-700 italic text-lg leading-relaxed mb-6">
+                        "I was nervous because I hadn't exercised in 15 years. The Chair Yoga class was so welcoming! My hip stiffness is almost gone, and I made three wonderful friends."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-sage-200 text-sage-800 font-bold flex items-center justify-center font-serif text-xl">M</div>
+                        <div>
+                            <div class="font-bold text-sage-800 text-lg">Margaret D. (Age 74)</div>
+                            <div class="text-sm text-gray-500">Orlando, Florida</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-sand-200 shadow-md relative">
+                    <div class="text-amber-400 text-xl mb-4">★ ★ ★ ★ ★</div>
+                    <p class="text-gray-700 italic text-lg leading-relaxed mb-6">
+                        "The Zoom classes are a blessing! I join every Tuesday morning from my living room. The instructor always checks in on how my back feels before we start."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 text-amber-900 font-bold flex items-center justify-center font-serif text-xl">R</div>
+                        <div>
+                            <div class="font-bold text-sage-800 text-lg">Robert H. (Age 68)</div>
+                            <div class="text-sm text-gray-500">Phoenix, Arizona</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-sand-200 shadow-md relative">
+                    <div class="text-amber-400 text-xl mb-4">★ ★ ★ ★ ★</div>
+                    <p class="text-gray-700 italic text-lg leading-relaxed mb-6">
+                        "As a physical therapist, I actively recommend Golden Age Yoga to my senior patients. Their focus on balance, safety, and proper breathing is top tier."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-sky-200 text-sky-900 font-bold flex items-center justify-center font-serif text-xl">Dr</div>
+                        <div>
+                            <div class="font-bold text-sage-800 text-lg">Dr. Susan Vance, PT</div>
+                            <div class="text-sm text-gray-500">Chicago, Illinois</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-sand-100 border-t border-sand-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-warmGold uppercase mb-2">Got Questions?</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-sage-800">Frequently Asked Questions</h3>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-sand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 font-serif text-xl font-bold text-sage-800 flex justify-between items-center focus:outline-none">
+                        <span>Are the yoga classes really 100% free?</span>
+                        <i class="fa-solid fa-chevron-down text-sage-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600 text-lg hidden leading-relaxed">
+                        Yes! Golden Age Yoga is funded through wellness grants, health organization sponsorships, and community donations. You will never be asked for a credit card or membership fee.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-sand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 font-serif text-xl font-bold text-sage-800 flex justify-between items-center focus:outline-none">
+                        <span>What if I have never done yoga before or can't sit on the floor?</span>
+                        <i class="fa-solid fa-chevron-down text-sage-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600 text-lg hidden leading-relaxed">
+                        No problem at all! Most of our members started with zero experience. We offer fully seated Chair Yoga classes where you never have to get down on the floor. Every posture can be modified to suit your body.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-sand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 font-serif text-xl font-bold text-sage-800 flex justify-between items-center focus:outline-none">
+                        <span>How do live online Zoom classes work?</span>
+                        <i class="fa-solid fa-chevron-down text-sage-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600 text-lg hidden leading-relaxed">
+                        Once you sign up, we email you a direct 1-click link to join class on your computer, tablet, or smartphone. Our friendly team is also available to assist you over the phone if you need help getting connected!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-sand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 font-serif text-xl font-bold text-sage-800 flex justify-between items-center focus:outline-none">
+                        <span>Where are the in-person classes held?</span>
+                        <i class="fa-solid fa-chevron-down text-sage-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600 text-lg hidden leading-relaxed">
+                        In-person classes take place in local community centers, senior centers, YMCA halls, and public parks across major US cities. Check our schedule table above to find a location near you.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Class Signup Modal -->
+    <div id="signup-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-sand-200 my-8">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-2xl w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center text-2xl mx-auto mb-3">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <h3 class="font-serif text-3xl font-bold text-sage-800">Claim Your 100% Free Class</h3>
+                <p class="text-gray-600 text-base mt-1">Select your preferred class type and we'll send your instant pass!</p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="free-class-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-1">Full Name *</label>
+                    <input type="text" required placeholder="e.g. Mary Johnson" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-sage-600 text-lg">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Email Address *</label>
+                        <input type="email" required placeholder="mary@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-sage-600 text-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Phone Number *</label>
+                        <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-sage-600 text-lg">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">City or Zip Code *</label>
+                        <input type="text" required placeholder="e.g. Tampa, FL or 33602" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-sage-600 text-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Preferred Format *</label>
+                        <select id="modal-class-select" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-sage-600 text-lg bg-white">
+                            <option value="Live Online (Zoom)">Live Online (Zoom)</option>
+                            <option value="Seated Chair Yoga (In-Person)">In-Person Chair Yoga</option>
+                            <option value="Gentle Mat Flow (In-Person)">In-Person Gentle Mat</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-sand-100 p-4 rounded-xl text-sm text-sage-800 flex items-start space-x-3">
+                    <i class="fa-solid fa-lock text-sage-600 text-lg mt-0.5"></i>
+                    <span>We respect your privacy. Your information will never be shared or sold. No credit card required.</span>
+                </div>
+
+                <button type="submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-bold py-4 rounded-xl text-xl shadow-lg transition">
+                    Get My Free Pass Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </form>
+
+            <!-- Success Message (Hidden initially) -->
+            <div id="success-message" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h4 class="font-serif text-3xl font-bold text-sage-800">You're All Set!</h4>
+                <p class="text-lg text-gray-600">
+                    We've emailed your Free Class Pass and schedule instructions. We look forward to seeing you in class!
+                </p>
+                <button onclick="closeModal()" class="bg-sage-600 text-white px-8 py-3 rounded-full font-semibold text-lg">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-sage-800 text-white pt-16 pb-12 border-t border-sage-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-warmGold text-white flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold">Golden Age Yoga</span>
+                    </div>
+                    <p class="text-sage-100 text-base max-w-md leading-relaxed">
+                        Dedicated to improving senior health, mobility, and happiness through gentle, 100% free yoga programs across the United States.
+                    </p>
+                    <div class="text-sm text-sage-200">
+                        <i class="fa-solid fa-envelope mr-2"></i> support@goldenageyoga.com
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-serif text-xl font-bold mb-4 text-warmGold">Quick Links</h4>
+                    <ul class="space-y-2 text-sage-100">
+                        <li><a href="#about" class="hover:text-white transition">About Our Mission</a></li>
+                        <li><a href="#classes" class="hover:text-white transition">Chair & Gentle Yoga</a></li>
+                        <li><a href="#locations" class="hover:text-white transition">USA City Locations</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Health Disclaimer -->
+                <div>
+                    <h4 class="font-serif text-xl font-bold mb-4 text-warmGold">Health Disclaimer</h4>
+                    <p class="text-xs text-sage-200 leading-normal">
+                        Please consult your doctor before starting any new exercise routine. Golden Age Yoga instructors provide gentle modifications, but participation is at your own comfort level.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-sage-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-sage-200 space-y-4 sm:space-y-0">
+                <div>
+                    © 2026 Golden Age Yoga (goldenageyoga.com). All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data for USA Cities Schedule
+        const scheduleData = [
+            { cityKey: 'online', city: 'Nationwide (Zoom)', day: 'Mon, Wed, Fri', time: '10:00 AM EST', type: 'Chair Yoga & Mobility', venue: 'Live Zoom Video Call' },
+            { cityKey: 'ny', city: 'New York, NY', day: 'Tues & Thurs', time: '10:30 AM EST', type: 'Gentle Flow & Mat', venue: 'Upper West Side Senior Center' },
+            { cityKey: 'ca', city: 'Los Angeles, CA', day: 'Mon & Wed', time: '9:30 AM PST', type: 'Chair Yoga', venue: 'Pasadena Community Center' },
+            { cityKey: 'fl', city: 'Tampa / Miami, FL', day: 'Tues & Sat', time: '9:00 AM EST', type: 'Restorative Breathing', venue: 'Suncoast Wellness Pavilion' },
+            { cityKey: 'tx', city: 'Houston, TX', day: 'Wed & Fri', time: '10:00 AM CST', type: 'Beginner Gentle Yoga', venue: 'Memorial Park Recreation Room' },
+            { cityKey: 'il', city: 'Chicago, IL', day: 'Thurs & Sat', time: '11:00 AM CST', type: 'Seated Chair Stretch', venue: 'Lincoln Park Community Hall' },
+            { cityKey: 'az', city: 'Phoenix, AZ', day: 'Mon & Thurs', time: '8:30 AM MST', type: 'Gentle Balance Flow', venue: 'Scottsdale Senior Activity Hub' },
+        ];
+
+        // Populate Schedule Table
+        function renderSchedule(filter = 'all') {
+            const tbody = document.getElementById('schedule-body');
+            tbody.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? scheduleData 
+                : scheduleData.filter(item => item.cityKey === filter || item.cityKey === 'online');
+
+            filtered.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-sand-50 transition border-b border-gray-100";
+                tr.innerHTML = `
+                    <td class="py-4 px-6 font-bold text-sage-800">${item.city}</td>
+                    <td class="py-4 px-6 text-gray-700">${item.day}<br><span class="text-sm font-normal text-gray-500">${item.time}</span></td>
+                    <td class="py-4 px-6">
+                        <span class="bg-sage-100 text-sage-800 text-sm font-semibold px-3 py-1 rounded-full">${item.type}</span>
+                    </td>
+                    <td class="py-4 px-6 text-gray-600">${item.venue}</td>
+                    <td class="py-4 px-6 text-center">
+                        <button onclick="openModal('${item.type} - ${item.city}')" class="bg-sage-600 hover:bg-sage-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow transition">
+                            Claim Free Pass
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Filter Function
+        function filterSchedule() {
+            const select = document.getElementById('location-select');
+            renderSchedule(select.value);
+        }
+
+        // Modal Functions
+        function openModal(classTitle) {
+            const modal = document.getElementById('signup-modal');
+            const select = document.getElementById('modal-class-select');
+            if (classTitle && select) {
+                // Preselect modal option if title matches
+                for (let i = 0; i < select.options.length; i++) {
+                    if (classTitle.includes(select.options[i].text)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('signup-modal');
+            modal.classList.add('hidden');
+            // Reset form state
+            document.getElementById('free-class-form').classList.remove('hidden');
+            document.getElementById('success-message').classList.add('hidden');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('free-class-form').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Initial Execution on load
+        window.onload = function() {
+            renderSchedule();
+        }
+    </script>
+</body>
+</html>
